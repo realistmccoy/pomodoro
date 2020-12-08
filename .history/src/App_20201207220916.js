@@ -11,11 +11,7 @@ export default function App() {
 
 	function startTimer() {
 		setInterval(() => {
-			setTimeLeft((timeLeft) => {
-				if (timeLeft >= 1) return timeLeft - 1;
-
-				return 0;
-			});
+			setTimeLeft(timeLeft - 1);
 		}, 1000);
 	}
 
@@ -33,7 +29,7 @@ export default function App() {
 			</div>
 
 			<div className='buttons'>
-				<button onClick={startTimer}>Start</button>
+				<button onClick={startTimer} >Start</button>
 				<button>Stop</button>
 				<button>Reset</button>
 			</div>

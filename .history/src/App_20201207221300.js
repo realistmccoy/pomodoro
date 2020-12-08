@@ -12,10 +12,8 @@ export default function App() {
 	function startTimer() {
 		setInterval(() => {
 			setTimeLeft((timeLeft) => {
-				if (timeLeft >= 1) return timeLeft - 1;
-
-				return 0;
-			});
+			if 
+				timeLeft - 1});
 		}, 1000);
 	}
 

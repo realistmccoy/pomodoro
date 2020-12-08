@@ -13,8 +13,6 @@ export default function App() {
 		setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
-
-				return 0;
 			});
 		}, 1000);
 	}
