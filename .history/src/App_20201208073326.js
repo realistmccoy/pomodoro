@@ -10,10 +10,9 @@ function padTime(time) {
 export default function App() {
 	const [title, setTitle] = useState('let the countdown begin!');
 	const [timeLeft, setTimeLeft] = useState(20 * 60);
-	let interval = null;
 
 	function startTimer() {
-		interval = setInterval(() => {
+		setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
 
@@ -23,7 +22,7 @@ export default function App() {
 	}
 
 	function stopTimer() {
-		clearInterval(interval)
+		clearInterval()
 	}
 
 	const minutes = padTime(Math.floor(timeLeft / 60));
@@ -41,7 +40,7 @@ export default function App() {
 
 			<div className='buttons'>
 				<button onClick={startTimer}>Start</button>
-				<button onClick={stopTimer}>Stop</button>
+				<button>Stop</button>
 				<button>Reset</button>
 			</div>
 		</div>

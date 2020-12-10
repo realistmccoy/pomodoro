@@ -41,7 +41,7 @@ export default function App() {
 
 			<div className='buttons'>
 				<button onClick={startTimer}>Start</button>
-				<button onClick={stopTimer}>Stop</button>
+				<button>Stop</button>
 				<button>Reset</button>
 			</div>
 		</div>

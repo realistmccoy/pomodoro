@@ -13,7 +13,7 @@ export default function App() {
 	let interval = null;
 
 	function startTimer() {
-		interval = setInterval(() => {
+		ineterval = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
 
@@ -23,7 +23,7 @@ export default function App() {
 	}
 
 	function stopTimer() {
-		clearInterval(interval)
+		clearInterval()
 	}
 
 	const minutes = padTime(Math.floor(timeLeft / 60));
@@ -41,7 +41,7 @@ export default function App() {
 
 			<div className='buttons'>
 				<button onClick={startTimer}>Start</button>
-				<button onClick={stopTimer}>Stop</button>
+				<button>Stop</button>
 				<button>Reset</button>
 			</div>
 		</div>
