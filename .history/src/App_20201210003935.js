@@ -7,31 +7,23 @@ function padTime(time) {
 }
 
 export default function App() {
-	const [title, setTitle] = useState('Press START to begin');
+	const [title, setTitle] = useState('let the countdown begin!');
 	const [timeLeft, setTimeLeft] = useState(20 * 60);
 	const intervalRef = useRef(null);
 
 	function startTimer() {
-		setTitle('FOCUS');
 		intervalRef.current = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
-				resetTimer();
+
 				return 0;
 			});
 		}, 1000);
 	}
 
 	function stopTimer() {
-		setTitle('Get back to work');
 		clearInterval(intervalRef.current);
 		console.log(intervalRef.current);
-	}
-
-	function resetTimer() {
-		clearInterval(intervalRef.current);
-		setTitle('Ready to go another round?');
-		setTimeLeft(20 * 60);
 	}
 
 	const minutes = padTime(Math.floor(timeLeft / 60));
@@ -48,9 +40,9 @@ export default function App() {
 			</div>
 
 			<div className='buttons'>
-				<Button onClick={startTimer}>Start</Button>
+				<Button color="primary" onClick={startTimer}>Start</Button>
 				<Button onClick={stopTimer}>Stop</Button>
-				<Button onClick={resetTimer}>Reset</Button>
+				<button>Reset</button>
 			</div>
 		</div>
 	);

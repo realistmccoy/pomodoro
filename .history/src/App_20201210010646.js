@@ -8,7 +8,7 @@ function padTime(time) {
 
 export default function App() {
 	const [title, setTitle] = useState('Press START to begin');
-	const [timeLeft, setTimeLeft] = useState(20 * 60);
+	const [timeLeft, setTimeLeft] = useState(3);
 	const intervalRef = useRef(null);
 
 	function startTimer() {

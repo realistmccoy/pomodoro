@@ -19,19 +19,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f6ff45;
+  background: #2ae6cd;
   color: #2f9153;
 }
 
 h2 {
-  color: #3eecf9;
+  color: #49b850;
   font-size: 30px;
   text-align: center;
   margin: 0;
 }
 
 .timer {
-  color: #ed72e9;
+  color: #1f6e72;
   font-size: 150px;
   margin-bottom: 20px;
 }
@@ -40,7 +40,7 @@ h2 {
   outline: none;
   border: none;
   font-size: 24px;
-  background: #eaf430;
+  background: #e7f214;
   color: #878b32;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@ h2 {
 
 .buttons button:hover {
   border-radius: 10px;
-  background: #b9bf61;
+  background: #f5f8ca;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }

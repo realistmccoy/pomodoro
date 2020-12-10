@@ -1,37 +1,29 @@
 import React, { useState, useRef } from 'react';
 import './App.css';
-import { Button } from '@material-ui/core';
 
 function padTime(time) {
 	return time.toString().padStart(2, '0');
 }
 
+
+
 export default function App() {
-	const [title, setTitle] = useState('Press START to begin');
+	const [title, setTitle] = useState('let the countdown begin!');
 	const [timeLeft, setTimeLeft] = useState(20 * 60);
-	const intervalRef = useRef(null);
+	const  interval = null;
 
 	function startTimer() {
-		setTitle('FOCUS');
-		intervalRef.current = setInterval(() => {
+		interval = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
-				resetTimer();
+
 				return 0;
 			});
 		}, 1000);
 	}
 
 	function stopTimer() {
-		setTitle('Get back to work');
-		clearInterval(intervalRef.current);
-		console.log(intervalRef.current);
-	}
-
-	function resetTimer() {
-		clearInterval(intervalRef.current);
-		setTitle('Ready to go another round?');
-		setTimeLeft(20 * 60);
+		clearInterval(interval)
 	}
 
 	const minutes = padTime(Math.floor(timeLeft / 60));
@@ -48,9 +40,9 @@ export default function App() {
 			</div>
 
 			<div className='buttons'>
-				<Button onClick={startTimer}>Start</Button>
-				<Button onClick={stopTimer}>Stop</Button>
-				<Button onClick={resetTimer}>Reset</Button>
+				<button onClick={startTimer}>Start</button>
+				<button onClick={stopTimer}>Stop</button>
+				<button>Reset</button>
 			</div>
 		</div>
 	);

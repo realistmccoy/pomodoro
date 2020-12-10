@@ -16,7 +16,7 @@ export default function App() {
 		intervalRef.current = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
-				resetTimer();
+
 				return 0;
 			});
 		}, 1000);
@@ -29,9 +29,8 @@ export default function App() {
 	}
 
 	function resetTimer() {
-		clearInterval(intervalRef.current);
-		setTitle('Ready to go another round?');
-		setTimeLeft(20 * 60);
+		clearInterval(intervalRef.current)
+		setTitle('')
 	}
 
 	const minutes = padTime(Math.floor(timeLeft / 60));
@@ -48,9 +47,11 @@ export default function App() {
 			</div>
 
 			<div className='buttons'>
-				<Button onClick={startTimer}>Start</Button>
+				<Button color='primary' onClick={startTimer}>
+					Start
+				</Button>
 				<Button onClick={stopTimer}>Stop</Button>
-				<Button onClick={resetTimer}>Reset</Button>
+				<Button>Reset</Button>
 			</div>
 		</div>
 	);
