@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/realistmccoy/pomodorostatic/css/main.d58a0a2b.chunk.css",
+    "main.js": "/realistmccoy/pomodorostatic/js/main.4bb77852.chunk.js",
+    "main.js.map": "/realistmccoy/pomodorostatic/js/main.4bb77852.chunk.js.map",
+    "runtime-main.js": "/realistmccoy/pomodorostatic/js/runtime-main.2dbd3741.js",
+    "runtime-main.js.map": "/realistmccoy/pomodorostatic/js/runtime-main.2dbd3741.js.map",
+    "static/js/2.5d21a839.chunk.js": "/realistmccoy/pomodorostatic/js/2.5d21a839.chunk.js",
+    "static/js/2.5d21a839.chunk.js.map": "/realistmccoy/pomodorostatic/js/2.5d21a839.chunk.js.map",
+    "index.html": "/realistmccoy/pomodoroindex.html",
+    "static/css/main.d58a0a2b.chunk.css.map": "/realistmccoy/pomodorostatic/css/main.d58a0a2b.chunk.css.map",
+    "static/js/2.5d21a839.chunk.js.LICENSE.txt": "/realistmccoy/pomodorostatic/js/2.5d21a839.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2dbd3741.js",
+    "static/js/2.5d21a839.chunk.js",
+    "static/css/main.d58a0a2b.chunk.css",
+    "static/js/main.4bb77852.chunk.js"
+  ]
+}
