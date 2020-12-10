@@ -31,5 +31,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "# Pomodoro timer",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realistmccoy/pomodoro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realistmccoy/pomodoro/issues"
+  },
+  "homepage": "https://github.com/realistmccoy/pomodoro#readme"
 }
