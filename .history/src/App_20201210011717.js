@@ -16,7 +16,7 @@ export default function App() {
 		if (intervalRef.current != null) return;
 
 		setTitle('FOCUS');
-		setIsRunning(true);
+		setIsRunning();
 		intervalRef.current = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
@@ -37,7 +37,6 @@ export default function App() {
 
 	function resetTimer() {
 		clearInterval(intervalRef.current);
-		intervalRef.current = null;
 		setTitle('Ready to go another round?');
 		setTimeLeft(20 * 60);
 		setIsRunning(false);

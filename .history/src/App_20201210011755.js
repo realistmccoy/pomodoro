@@ -16,7 +16,7 @@ export default function App() {
 		if (intervalRef.current != null) return;
 
 		setTitle('FOCUS');
-		setIsRunning(true);
+		setIsRunning();
 		intervalRef.current = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;

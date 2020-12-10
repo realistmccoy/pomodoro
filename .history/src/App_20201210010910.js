@@ -9,14 +9,11 @@ function padTime(time) {
 export default function App() {
 	const [title, setTitle] = useState('Press START to begin');
 	const [timeLeft, setTimeLeft] = useState(20 * 60);
-	const [isRunning, setIsRunning] = useState(false);
 	const intervalRef = useRef(null);
 
 	function startTimer() {
-		if (intervalRef.current != null) return;
-
+		if (intervalRef.current =/= )
 		setTitle('FOCUS');
-		setIsRunning(true);
 		intervalRef.current = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
@@ -27,20 +24,15 @@ export default function App() {
 	}
 
 	function stopTimer() {
-		if (intervalRef.current === null) return;
 		setTitle('Get back to work');
 		clearInterval(intervalRef.current);
-		intervalRef.current = null;
 		console.log(intervalRef.current);
-		setIsRunning(false);
 	}
 
 	function resetTimer() {
 		clearInterval(intervalRef.current);
-		intervalRef.current = null;
 		setTitle('Ready to go another round?');
 		setTimeLeft(20 * 60);
-		setIsRunning(false);
 	}
 
 	const minutes = padTime(Math.floor(timeLeft / 60));
@@ -57,8 +49,8 @@ export default function App() {
 			</div>
 
 			<div className='buttons'>
-				{!isRunning && <Button onClick={startTimer}>Start</Button>}
-				{isRunning && <Button onClick={stopTimer}>Stop</Button>}
+				<Button onClick={startTimer}>Start</Button>
+				<Button onClick={stopTimer}>Stop</Button>
 				<Button onClick={resetTimer}>Reset</Button>
 			</div>
 		</div>

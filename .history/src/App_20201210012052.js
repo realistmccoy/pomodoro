@@ -16,7 +16,7 @@ export default function App() {
 		if (intervalRef.current != null) return;
 
 		setTitle('FOCUS');
-		setIsRunning(true);
+		setIsRunning();
 		intervalRef.current = setInterval(() => {
 			setTimeLeft((timeLeft) => {
 				if (timeLeft >= 1) return timeLeft - 1;
@@ -57,8 +57,8 @@ export default function App() {
 			</div>
 
 			<div className='buttons'>
-				{!isRunning && <Button onClick={startTimer}>Start</Button>}
-				{isRunning && <Button onClick={stopTimer}>Stop</Button>}
+				{isRunning && <Button onClick={startTimer}>Start</Button>}
+				{!isRunning && <Button onClick={stopTimer}>Stop</Button>}
 				<Button onClick={resetTimer}>Reset</Button>
 			</div>
 		</div>
